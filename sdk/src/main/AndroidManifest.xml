@@ -38,5 +38,8 @@
         </provider>
 
     </application>
-
+    <queries>
+        <!--   修复Android 11 微信分享无法拉起问题     -->
+        <package android:name="com.tencent.mm" />
+    </queries>
 </manifest>
