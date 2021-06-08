@@ -1,0 +1,3 @@
+rootProject.name = "WechatSdk"
+include ':app'
+include ':sdk'

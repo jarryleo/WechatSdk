@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.leo.sdk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <!--    微信回调activity     -->
+        <activity
+            android:name=".wechat.WeChatEntryActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme_Transparent" />
+
+        <!--    微信回调activity别名类，因为微信需要回调到指定包名指定类名，所以设置别名     -->
+        <activity-alias
+            android:name="${applicationId}.wxapi.WXEntryActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity=".wechat.WeChatEntryActivity" />
+
+        <!--    微信支付回调activity别名类，和微信登录，微信分享的类名不一样    -->
+        <activity-alias
+            android:name="${applicationId}.wxapi.WXPayEntryActivity"
+            android:enabled="true"
+            android:exported="true"
+            android:targetActivity=".wechat.WeChatEntryActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.WxFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/wx_file_provider" />
+        </provider>
+
+    </application>
+
+</manifest>
