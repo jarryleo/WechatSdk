@@ -2,7 +2,6 @@ package cn.leo.sdk.wechat;
 
 import android.app.Application;
 
-import com.tencent.mm.opensdk.constants.Build;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
@@ -24,7 +23,7 @@ final class WeChatSdkImpl {
     }
 
     IWXAPI getWxApi() {
-        if (sWxApi == null){
+        if (sWxApi == null) {
             throw new NullPointerException("微信sdk尚未初始化");
         }
         return sWxApi;
