@@ -10,7 +10,8 @@
             android:name=".wechat.WeChatEntryActivity"
             android:enabled="true"
             android:exported="true"
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
+            android:taskAffinity="${applicationId}"
             android:theme="@style/AppTheme_Transparent" />
 
         <!--    微信回调activity别名类，因为微信需要回调到指定包名指定类名，所以设置别名     -->
