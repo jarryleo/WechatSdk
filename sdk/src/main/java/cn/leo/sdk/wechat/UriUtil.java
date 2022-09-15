@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 
-import androidx.core.content.FileProvider;
-
 import java.io.File;
 
 /**
@@ -19,14 +17,14 @@ public class UriUtil {
     /**
      * 给文件赋予别的应用访问权限
      *
-     * @param context 上下文
-     * @param file  文件
+     * @param context     上下文
+     * @param file        文件
      * @param packageName 别的应用包名
      * @return Uri
      */
     public static Uri grantUri(Context context, File file, String packageName) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Uri uri = FileProvider.getUriForFile(context,
+            Uri uri = WechatFileProvider.getUriForFile(context,
                     context.getPackageName() + ".WxFileProvider", file);
             if (packageName != null) {
                 context.grantUriPermission(packageName, uri,

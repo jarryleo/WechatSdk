@@ -112,7 +112,7 @@ public class WeChatSdk {
 
 
     /**
-     * 分享到微信朋友圈
+     * 分享到微信小程序
      *
      * @param title                     标题
      * @param description               描述

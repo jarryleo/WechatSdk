@@ -29,7 +29,7 @@
             android:targetActivity=".wechat.WeChatEntryActivity" />
 
         <provider
-            android:name="androidx.core.content.FileProvider"
+            android:name="cn.leo.sdk.wechat.WechatFileProvider"
             android:authorities="${applicationId}.WxFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
