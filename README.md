@@ -20,3 +20,23 @@ pendencies {
 	        implementation 'com.github.jarryleo:WechatSdk:1.0.0'
 }
 ```
+### init:
+```
+public class App extends Application {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        WeChatSdk.init(this,"你的微信appId");
+    }
+}
+```
+### APIS:
+```
+WeChatSdk.login()
+WeChatSdk.pay()
+WeChatSdk.shareToWechat()
+WeChatSdk.shareToMoment()
+WeChatSdk.shareToMiniProgram()
+WeChatSdk.isInstallWechat()
+WeChatSdk.isSupportMoment()
+```

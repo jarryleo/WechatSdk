@@ -13,6 +13,6 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        WeChatSdk.init(this,"");
+        WeChatSdk.init(this,"你的微信appId");
     }
 }
