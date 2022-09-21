@@ -17,7 +17,7 @@ allprojects {
 ### Step 2. Add the dependency
 ```
 pendencies {
-	        implementation 'com.github.jarryleo:WechatSdk:1.0.0'
+	        implementation 'com.github.jarryleo:WechatSdk:1.0.1'
 }
 ```
 ### init:
